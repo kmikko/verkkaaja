@@ -5,7 +5,7 @@ echo
 read -p 'Product URL: ' PRODUCT_URL
 
 # Login
-TOKEN=$(curl -s 'https://www.verkkokauppa.com/resp-api/login' \
+TOKEN=$(curl -s -f 'https://www.verkkokauppa.com/resp-api/login' \
 -H 'Origin: https://www.verkkokauppa.com' \
 -H 'Accept-Encoding: gzip, deflate, br' \
 -H 'Accept-Language: en-US,en;q=0.8,fi;q=0.6' \
