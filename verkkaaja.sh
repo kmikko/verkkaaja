@@ -56,7 +56,7 @@ fi
 echo Trying to add product to shopping cart...
 # Release the hounds
 while true; do
-  ERRORS=$(curl -s 'https://www.verkkokauppa.com/api/v2/cart/'$CART'?pid='$SKU'&quantity=1' \
+  ERRORS=$(curl -s "https://www.verkkokauppa.com/api/v2/cart/${CART}?pid=${SKU}&quantity=1" \
     -X PUT \
     -H 'Authorization: Bearer '$TOKEN \
     -H 'Origin: https://www.verkkokauppa.com' \
