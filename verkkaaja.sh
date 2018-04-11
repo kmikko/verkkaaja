@@ -1,8 +1,36 @@
 #!/bin/bash
-read -p 'Email: ' EMAIL
-read -sp 'Password: ' PASS
-echo
-read -p 'Product URL: ' PRODUCT_URL
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+  --login)
+  EMAIL="$2"
+  shift 2
+  ;;
+  --password)
+  PASS="$2"
+  shift 2
+  ;;
+  --url)
+  PRODUCT_URL="$2"
+  shift 2
+  ;;
+  *)
+  echo "Unknown option: $1"
+  exit 1
+  ;;
+esac
+done
+
+if [ -z "$EMAIL" ]; then
+  read -p 'Email: ' EMAIL
+fi
+if [ -z "$PASS" ]; then
+  read -sp 'Password: ' PASS
+fi
+if [ -z "$PRODUCT_URL" ]; then
+  echo
+  read -p 'Product URL: ' PRODUCT_URL
+fi
 
 # Login
 TOKEN=$(curl -s -f 'https://www.verkkokauppa.com/resp-api/login' \
