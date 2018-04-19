@@ -15,6 +15,12 @@ Run script, provide your login details and URL of the product you wish to reserv
 ./verkkaaja.sh
 ```
 
+...or run in a Docker container:
+```sh
+docker build -t verkkaaja .
+docker run verkkaaja --login [username] --password [password] --url [product-url]
+```
+
 Happy hunting!
 
 ## License
