@@ -23,5 +23,9 @@ docker run verkkaaja --login [username] --password [password] --url [product-url
 
 Happy hunting!
 
+## Contribution
+Format your code using [shfmt](https://github.com/mvdan/sh) and according to [Google's Shell Style Guide](https://google.github.io/styleguide/shell.xml)
+using `shfmt -i 2 -ci -w verkkaaja.sh`
+
 ## License
 MIT
