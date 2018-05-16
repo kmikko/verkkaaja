@@ -1,6 +1,7 @@
 # Verkkaaja
 Shopping assistant for Finnish online retail store Verkkokauppa.com
 
+[![Build Status](https://travis-ci.org/kmikko/verkkaaja.svg?branch=master)](https://travis-ci.org/kmikko/verkkaaja)
 
 ![verkkaaja](https://user-images.githubusercontent.com/2776729/31810379-38a3eb74-b584-11e7-8de3-f866464d4a9f.gif)
 
